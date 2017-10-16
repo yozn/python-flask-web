@@ -1,52 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
 function myFunction(p1) {
     document.getElementById("demo").innerHTML = p1.value;
     document.getElementById("update_button").value = p1.value;
 }
   </script>
-  <style>
+ <style>
 body {
-    background-color: lightblue;
+    margin : 0;
+    background-color:#111;
 }
-h1 {
-  position: absolute;
-    left: 600px;
-    top: 50px;
-    color: white;
+*{
+     box-sizing: border-box;
+
+}
+#demo{
+    left:50%;
+    top:30px;
+    color: darkgrey;
     text-align: center;
 }
+#123{
+    color:red;
+}
+
+
 p {
-  position: absolute;
-    left: 450px;
-    top: 60px;
-    font-family: verdana;
+    //position: relative;
+    left: 610px;
+    top: 0px;
+    font-family: monospace;
     font-size: 20px;
 }
+.sidenav {
+    height: 50%;
+    width: 600px;
+    position: fixed;
+    z-index: 1;
+    top: 270px;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+}
+.content {
+    border-style: solid;
+    border-color: #ff0000 #00ff00 #0000ff rgb(250,0,255);
+    margin-left: 600px;
+    padding-left: 200px;
+}
 form {
-  position: absolute;
     left: 600px;
     top: 150px;
 }
 </style>
 <title>ROCK'and ROLL!</title>
-  <img src="static/panda.jpg" alt="panda" style="width:304px;height:228px;">
-  <img src="static/giphy.gif" alt="gos" style="width:304px;height:228px;">
 </head>
 <body>
+<h1 id="demo">This is a Heading
+     <img src="static/panda.jpg" alt="panda" style="width:304px;height:228px;">
 
-<form name="myForm" action= "javascript:myFunction(fname);"
->
-Name: <input type="text" name="fname">
+</h1>
+<div class="sidenav">
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+    <img src="static/minions.gif" alt="minions" style="width:600px;height:400px; border-style: solid;">
+</div>
+<div class="content">
+
+  <h2>CSS Template</h2>
+  <p>A full-height, fixed sidenav and content.</p>
+    <p>Text:1<br>
+        Text:2<br>
+        Text:3<br>
+        Text:4<br>
+    </p>
+</div>
+<form name="myForm" action= "javascript:myFunction(fname);">
+Name: <input type="text" name="fname" id="123">
   SendText: <input type="text" name="sendtext">
-<button type="button" onclick='myFunction(fname)'>Reset-yourname</button>
+<button type="button" onclick=''>ReLoad</button>
   <button type="submit" formaction="/input" formmethod="get" name="update_button"  >SEnd</button>
 </form>
-
-<h1 id="demo">This is a Heading</h1>
-<p>Your name:</p>
-
 </body>
 </html>
