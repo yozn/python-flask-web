@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>
+function myFunction(p1) {
+    document.getElementById("demo").innerHTML = p1.value;
+    document.getElementById("update_button").value = p1.value;
+}
+  </script>
+  <style>
+body {
+    background-color: lightblue;
+}
+h1 {
+  position: absolute;
+    left: 600px;
+    top: 50px;
+    color: white;
+    text-align: center;
+}
+p {
+  position: absolute;
+    left: 450px;
+    top: 60px;
+    font-family: verdana;
+    font-size: 20px;
+}
+form {
+  position: absolute;
+    left: 600px;
+    top: 150px;
+}
+</style>
+<title>ROCK'and ROLL!</title>
+  <img src="static/panda.jpg" alt="panda" style="width:304px;height:228px;">
+  <img src="static/giphy.gif" alt="gos" style="width:304px;height:228px;">
+</head>
+<body>
+
+<form name="myForm" action= "javascript:myFunction(fname);"
+>
+Name: <input type="text" name="fname">
+  SendText: <input type="text" name="sendtext">
+<button type="button" onclick='myFunction(fname)'>Reset-yourname</button>
+  <button type="submit" formaction="/input" formmethod="get" name="update_button"  >SEnd</button>
+</form>
+
+<h1 id="demo">This is a Heading</h1>
+<p>Your name:</p>
+
+</body>
+</html>
