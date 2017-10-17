@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script>
-function myFunction(p1) {
-    document.getElementById("demo").innerHTML = p1.value;
-    document.getElementById("update_button").value = p1.value;
+function myFunction() {
+    document.getElementById("demo").innerText ="Welcome :Dear "+ document.getElementById("123").value
 }
   </script>
  <style>
@@ -15,13 +14,11 @@ body {
 }
 *{
      box-sizing: border-box;
-
 }
+
 #demo{
-    left:50%;
-    top:30px;
     color: darkgrey;
-    text-align: center;
+    text-align: -webkit-center;
 }
 #123{
     color:red;
@@ -34,14 +31,19 @@ p {
     font-size: 20px;
     color:red;
 }
+label{
+    color: blueviolet;
+    font-family: monospace;
+    font-size: 15px;
+}
 .sidenav {
     border-style: solid;
      border-color:chocolate;
-    height: 50%;
+    height: 60%;
     width: 600px;
     position: fixed;
     z-index: 1;
-    top: 279px;
+    top: 324px;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
@@ -60,20 +62,16 @@ form {
 <title>ROCK'and ROLL!</title>
 </head>
 <body>
-<h1 id="demo">This is a Heading
-     <img src="static/panda.jpg" alt="panda" style="width:304px;height:228px;">
-
-</h1>
+<h1 id="demo">Welcome Chatin :what 's your name?</h1>
+<img src="static/panda.jpg" alt="panda" style="width:304px;height:228px;position: relative ;left: 50%">
 <div class="sidenav">
   <a href="#">Link</a>
   <a href="#">Link</a>
   <a href="#">Link</a>
     <img src="static/minions.gif" alt="minions" style="width:600px;height:400px; border-style: solid;">
-
     <form name="myForm" action= "javascript:myFunction(fname);">
-Name: <input type="text" name="fname" id="123">
-  SendText: <input type="text" name="sendtext">
-<button type="button" onclick=''>ReLoad</button>
+<label >Your Name:</label> <input style="color:darkblue" type="text" name="fname" id="123" value="Your name">
+<label > SendText: </label><input type="text" name="sendtext" autofocus>
   <button type="submit" formaction="/input" formmethod="post" name="update_button"  >SEnd</button>
 </form>
 </div>
